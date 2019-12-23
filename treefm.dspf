@@ -1,0 +1,22 @@
+     A          R TREES1                    INVITE
+     A                                      CF03(03)
+     A            DUMMY          1A  I  2  2DSPATR(PR ND)
+     A            ROW01         23A  O  3 30
+     A            ROW02         23A  O  4 30
+     A            ROW03         23A  O  5 30
+     A            ROW04         23A  O  6 30
+     A            ROW05         23A  O  7 30
+     A            ROW06         23A  O  8 30
+     A            ROW07         23A  O  9 30
+     A            ROW08         23A  O 10 30
+     A            ROW09         23A  O 11 30
+     A            ROW10         23A  O 12 30
+     A            ROW11         23A  O 13 30
+     A            ROW12         23A  O 14 30
+     A            ROW13         23A  O 15 30
+     A            ROW14         23A  O 16 30
+     A            ROW15         23A  O 17 30
+     A            ROW16         23A  O 18 30
+     A            ROW17         23A  O 19 30
+     A            ROW18         23A  O 20 30
+     A                                 23  2'F3=Exit' COLOR(BLU)

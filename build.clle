@@ -1,0 +1,27 @@
+             PGM
+
+             DCL        VAR(&BIN_LIB) TYPE(*CHAR) LEN(10) VALUE('TREE')
+             DCL        VAR(&NAME) TYPE(*CHAR) LEN(40) VALUE('Chrstmas +
+                          Tree')
+             DCL        VAR(&DBGVIEW) TYPE(*CHAR) LEN(10) VALUE('*SOURCE')
+             DCL        VAR(&TGTRLS) TYPE(*CHAR) LEN(7) VALUE('V7R3M0')
+
+             CRTLIB     LIB(&BIN_LIB)
+             MONMSG     MSGID(CPF0000)
+
+             CLRLIB     LIB(&BIN_LIB)
+
+             ADDLIBLE   LIB(TREE)
+
+             CRTSRCPF   FILE(&BIN_LIB/QSOURCE) MBR(TREEFM) RCDLEN(112)
+             CPYFRMSTMF FROMSTMF('treefm.dspf') TOMBR('/QSYS.lib/' *TCAT +
+                          &BIN_LIB *TCAT '.lib/QSOURCE.file/treefm.mbr') +
+                          MBROPT(*REPLACE)
+             CRTDSPF    FILE(&BIN_LIB/TREEFM) SRCFILE(&BIN_LIB/QSOURCE) +
+                          SRCMBR(TREEFM) TEXT(&NAME)
+             DLTF       FILE(&BIN_LIB/QSOURCE)
+             CRTBNDRPG  PGM(&BIN_LIB/TREE) SRCSTMF('tree.rpgle') +
+                          TEXT(&NAME) REPLACE(*YES) DBGVIEW(&DBGVIEW) +
+                          TGTRLS(&TGTRLS)
+
+             ENDPGM
