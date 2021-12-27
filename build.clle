@@ -4,7 +4,7 @@
              DCL        VAR(&NAME) TYPE(*CHAR) LEN(40) VALUE('Chrstmas +
                           Tree')
              DCL        VAR(&DBGVIEW) TYPE(*CHAR) LEN(10) VALUE('*SOURCE')
-             DCL        VAR(&TGTRLS) TYPE(*CHAR) LEN(7) VALUE('V7R3M0')
+             DCL        VAR(&TGTRLS) TYPE(*CHAR) LEN(7) VALUE('V7R1M0')
 
              CRTLIB     LIB(&BIN_LIB)
              MONMSG     MSGID(CPF0000)
