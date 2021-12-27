@@ -25,3 +25,6 @@ all: $(BIN_LIB).lib treefm.dspf tree.rpgle
 
 clean:
 	system "CLRLIB $(BIN_LIB)"
+
+erase:
+	-system -qi "DLTLIB LIB($(BIN_LIB))"
