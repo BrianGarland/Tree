@@ -6,8 +6,10 @@ SHELL=/QOpenSys/usr/bin/qsh
 
 #----------
 
-all: $(BIN_LIB).lib treefm.dspf tree.rpgle
+all: $(BIN_LIB).lib tree.rpgle
 	@echo "Built all"
+
+tree.rpgle: treefm.dspf 
 
 #----------
 
@@ -24,7 +26,7 @@ all: $(BIN_LIB).lib treefm.dspf tree.rpgle
 	-system -qi "CRTSRCPF FILE($(BIN_LIB)/QSOURCE) MBR($*) RCDLEN(112)"
 
 clean:
-	system "CLRLIB $(BIN_LIB)"
+	system "CLRLIB LIB($(BIN_LIB))"
 
 erase:
 	-system -qi "DLTLIB LIB($(BIN_LIB))"
