@@ -12,7 +12,7 @@ all: $(BIN_LIB).lib treefm.dspf tree.rpgle
 #----------
 
 %.rpgle:
-	liblist -a $(BIN_LIB);\ 
+	liblist -a $(BIN_LIB);\
 	system "CRTBNDRPG PGM($(BIN_LIB)/$*) SRCSTMF('$*.rpgle') TEXT('$(NAME)') REPLACE(*YES) DBGVIEW($(DBGVIEW)) TGTRLS($(TGTRLS))"
 
 %.dspf:
